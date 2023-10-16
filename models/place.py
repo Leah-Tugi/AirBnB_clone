@@ -5,7 +5,11 @@ from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Class for managing place objects"""
+    """Class for managing place objects
+
+            class that inherits from base model attrributes:
+            city_id user_id name description number_ro0ms: empty str
+    """
 
     city_id = ""
     user_id = ""

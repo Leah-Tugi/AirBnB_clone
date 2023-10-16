@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script is the base model"""
+"""This script is the base model and Parent class"""
 
 import uuid
 from datetime import datetime
@@ -8,7 +8,7 @@ from models import storage
 
 class BaseModel:
 
-    """Class from which all other classes will inherit"""
+    """Class BaseModel from which all other classes will inherit"""
 
     def __init__(self, *args, **kwargs):
         """Initializes instance attributes
