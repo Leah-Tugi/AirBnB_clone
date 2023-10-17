@@ -1,13 +1,11 @@
 # The AirBnB Clone Project
 ![AirBnB Logo]
-
 # Project Description
 This is the first part of the AirBnB clone project where we
 worked on the backend of the project whiles interfacing it
 with console application with the help of cmd module in python.
 
-Data(python objects)generated are stored in a json file
-and can be accessed with the help of the json module in python
+The AirBnB project.
 
 # Description of the command interpreter:
 The interface of the application is just like the Bash shell
