@@ -167,7 +167,7 @@ class HBNBCommand(cmd.Cmd):
                     words[0] + '.')]
             print(len(matches))
 
-        """ def do_update(self, line):
+    def do_update(self, line):
         """Updates an instance by adding or updating attribute.
         """
         if line == "" or line is None:
@@ -213,41 +213,6 @@ class HBNBCommand(cmd.Cmd):
                         pass  # fine, stay a string then
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
-          """
-
-
-def do_update(self, line):
-    """Updates an instance with a dictionary representation by ID."""
-    if line == "" or line is None:
-        print("** class name missing **")
-        return
-
-    rex = r'^(\S+)(?:\s(\S+)(?:\s({.*}))?)'
-    match = re.search(rex, line)
-    classname = match.group(1)
-    uid = match.group(2)
-    s_dict = match.group(3)
-
-    if not match:
-        print("** class name missing **")
-    elif classname not in storage.classes():
-        print("** class doesn't exist **")
-    elif uid is None:
-        print("** instance id missing **")
-    elif s_dict is None:
-        print("** dictionary missing **")
-    else:
-        key = "{}.{}".format(classname, uid)
-        if key not in storage.all():
-            print("** no instance found **")
-        else:
-            try:
-                d = json.loads(s_dict)
-                for k, v in d.items():
-                    setattr(storage.all()[key], k, v)
-                storage.all()[key].save()
-            except ValueError:
-                print("** invalid dictionary **")
 
 
 if __name__ == '__main__':
