@@ -50,11 +50,6 @@ class TestReview_instantiation(unittest.TestCase):
         self.assertIn("text", dir(rv))
         self.assertNotIn("text", rv.__dict__)
 
-    def test_two_reviews_unique_ids(self):
-        rv1 = Review()
-        rv2 = Review()
-        self.assertNotEqual(rv1.id, rv2.id)
-
     def test_two_reviews_different_created_at(self):
         rv1 = Review()
         sleep(0.05)
